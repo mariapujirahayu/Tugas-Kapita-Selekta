@@ -78,8 +78,8 @@
                       <th>Prestasi</th>
                       <th>Fasilitas</th>
                       <th>Tenaga Pendidik</th>
-                      <th>Jarak Tempuh</th>
-                      <th>Ekstrakulikuler</th>
+                      <th>Umur</th>
+                      <th >Ekstrakulikuler</th>
                       <th class="text-center">Aksi</th>
                     </thead>
                     <tbody>

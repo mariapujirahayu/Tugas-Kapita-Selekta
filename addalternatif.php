@@ -103,8 +103,8 @@
                         </select>
                       </div>
                       <div class="form-group">
-                        <label>Jarak Tempuh</label>
-                        <input type="number" class="form-control" name="jarak" required placeholder="Berapa km jarak tempuh dari rumah ke sekolah?">
+                        <label>Umur</label>
+                        <input type="number" class="form-control" name="jarak" required placeholder="Umur disarankan antara 6 sampai 12 tahun">
                       </div>
                       <div class="form-group">
                         <label for="selectekstra">Ekstrakulikuler</label>
@@ -178,17 +178,20 @@
                     }
 
                     $kriteria5 = $_POST[jarak];
-                    if($kriteria5 <= 0 && $kriteria5 > 3){
-                      $c5 <= "4";
+                    if($kriteria5 > 12){
+                      $c5 <= "0";
                     }
-                    elseif($kriteria5 <= 3 && $kriteria5 >= 10){
-                      $c5 = "3";
+                    elseif($kriteria5 >10){
+                      $c5 = "1";
                     }
-                    elseif($kriteria5 <= 10 && $kriteria5 >= 20){
+                    elseif($kriteria5 > 8){
                       $c5 = "2";
                     }
+                    elseif($kriteria5 >= 6){
+                      $c5 = "3";
+                    }
                     else {
-                      $c5 = "1";
+                      $c5 = "0";
                     }
 
                     $kriteria6 = $_POST[ekstrakulikuler];

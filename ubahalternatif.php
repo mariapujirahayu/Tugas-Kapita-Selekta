@@ -99,7 +99,7 @@ $pecah = $ambil->fetch_assoc();
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label>Jarak Tempuh</label>
+                        <label>Umur</label>
                         <input disabled="" type="text" class="form-control" value="<?php echo $pecah['kriteria5']; ?>">
                       </div>
                     </div>
@@ -153,7 +153,7 @@ $pecah = $ambil->fetch_assoc();
                         </select>
                       </div>
                       <div class="form-group">
-                        <label>Jarak Tempuh</label>
+                        <label>Umur</label>
                         <input type="number" class="form-control" name="jarak" required value="<?php echo $pecah['kriteria5']; ?>">
                       </div>
                       <div class="form-group">
@@ -228,17 +228,20 @@ $pecah = $ambil->fetch_assoc();
                     }
 
                     $kriteria5 = $_POST[jarak];
-                    if($kriteria5 <= 0 && $kriteria5 > 3){
-                      $c5 <= "4";
+                    if($kriteria5 > 12){
+                      $c5 <= "0";
                     }
-                    elseif($kriteria5 <= 3 && $kriteria5 >= 10){
-                      $c5 = "3";
+                    elseif($kriteria5 >10){
+                      $c5 = "1";
                     }
-                    elseif($kriteria5 <= 10 && $kriteria5 >= 20){
+                    elseif($kriteria5 > 8){
                       $c5 = "2";
                     }
+                    elseif($kriteria5 >= 6){
+                      $c5 = "3";
+                    }
                     else {
-                      $c5 = "1";
+                      $c5 = "0";
                     }
 
                     $kriteria6 = $_POST[ekstrakulikuler];
